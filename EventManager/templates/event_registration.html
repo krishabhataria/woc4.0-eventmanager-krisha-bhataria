@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href='{% static 'style.css' %}' type="text/css">
+</head>
+<body>
+<h1>Event Registration</h1>
+
+<div>
+<form action="event_list" method="post">
+    {% csrf_token %}
+    Name:<input type="text" name="event_name">
+    <br>
+    <br>
+    Description:<textarea name="des"></textarea>
+    <br>
+    <br>
+    PosterLink:<input type="url" name="poster">
+    <br>
+    <br>
+    From Date: <input type="datetime-local" name="fr_date">
+    <br>
+    <br>
+    To Date: <input type="datetime-local" name="to_date">
+    <br>
+    <br>
+    Deadline: <input type="datetime-local" name="deadline">
+    <br>
+    <br>
+    Email: <input type="email" name="mail">
+    <br>
+    <br>
+    Password: <input type="password" name="pass">
+    <br>
+    <br>
+    <button name="Submit" style="align-content: space-around">Submit</button>
+</form>
+</div>
+</body>
+</html>
